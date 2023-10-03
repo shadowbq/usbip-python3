@@ -6,10 +6,6 @@ USBIP and Python3 for Windows 10/11. These servers should be running v1.1.1 or 0
 
 https://www.python.org/ftp/python/3.12.0/python-3.12.0-amd64.exe
 
-### Install USBIPD
-
-https://github.com/dorssel/usbipd-win/releases/download/v3.2.0/usbipd-win_3.2.0.msi
-
 ### Admin CMD
 
 `bcdedit /set testsigning on`
@@ -20,16 +16,7 @@ https://github.com/dorssel/usbipd-win/releases/download/v3.2.0/usbipd-win_3.2.0.
 https://github.com/vadimgrn/usbip-win2/releases/download/v.0.9.5.6/USBip-0.9.5.6-Release.exe
 (Full Install)
 
-
-## Windows USBIP-D Server
-
-https://github.com/dorssel/usbipd-win
-
-Windows software for sharing locally connected USB devices to other machines, including Hyper-V guests and WSL 2.
-(reference Cezanne - https://github.com/dorssel/usbipd-win/issues/79 ) 
-
-
-## USB/IP Client for Windows
+### USB/IP Client for Windows
 
 * Fully compatible with USB/IP protocol
 * Works with Linux USB/IP server at least for kernels 4.19 - 6.2
@@ -39,7 +26,31 @@ Windows software for sharing locally connected USB devices to other machines, in
 
 Note: Is not ready for production use, can cause BSOD (whateva)
 
-https://github.com/vadimgrn/usbip-win2
+* https://github.com/vadimgrn/usbip-win2
+
+`.\usbip.exe -t 50000 attach -r 127.0.0.1 -b 1-1`
+
+## Others
+
+USB D Server is when you want to share an actual USB Device. When you use the python `hid-mouse.py`, the `USBIP.py` acts a USB-IP Server instead. 
+
+You may want to change the `hid-mouse.py` run command to use 
+
+```python
+usb_container.run(ip="0.0.0.0", port="50000")
+```
+
+### Install USBIPD
+
+https://github.com/dorssel/usbipd-win/releases/download/v3.2.0/usbipd-win_3.2.0.msi
+
+### Windows USBIP-D Server
+
+https://github.com/dorssel/usbipd-win
+
+Windows software for sharing locally connected USB devices to other machines, including Hyper-V guests and WSL 2.
+(reference Cezanne - https://github.com/dorssel/usbipd-win/issues/79 ) 
+
 
 
 ## Classic Stuff from USBIP Community
