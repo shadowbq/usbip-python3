@@ -28,17 +28,33 @@ Note: Is not ready for production use, can cause BSOD (whateva)
 
 * https://github.com/vadimgrn/usbip-win2
 
+## Run
+
+You may want to change the `hid-mouse.py` run command to use port 50000
+
+```python
+usb_container.run(ip="0.0.0.0", port="50000")
+```
+
+
+```
+C:\Program Files\USBip>usbip.exe -t 50000 list -r 127.0.0.1
+Exportable USB devices
+======================
+    1-1    : unknown vendor : unknown product (2706:0000)
+           : /sys/devices/pci0000:00/0000:00:01.2/usb1/1-1
+           : (Defined at Interface level) (00/00/00)
+           :  0 - Human Interface Device/Boot Interface Subclass/Mouse (03/01/02)
+```
+
 `.\usbip.exe -t 50000 attach -r 127.0.0.1 -b 1-1`
+
 
 ## Others
 
 USB D Server is when you want to share an actual USB Device. When you use the python `hid-mouse.py`, the `USBIP.py` acts a USB-IP Server instead. 
 
-You may want to change the `hid-mouse.py` run command to use 
 
-```python
-usb_container.run(ip="0.0.0.0", port="50000")
-```
 
 ### Install USBIPD
 
