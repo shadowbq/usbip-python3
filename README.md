@@ -2,7 +2,7 @@
 
 USBIP and Python3 for Windows 10/11. These servers should be running v1.1.1 or 0x273
 
-## Windows USBIP-D Serer
+## Windows USBIP-D Server
 
 https://github.com/dorssel/usbipd-win
 
