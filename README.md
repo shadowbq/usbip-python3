@@ -2,6 +2,25 @@
 
 USBIP and Python3 for Windows 10/11. These servers should be running v1.1.1 or 0x273
 
+### Install Python3
+
+https://www.python.org/ftp/python/3.12.0/python-3.12.0-amd64.exe
+
+### Install USBIPD
+
+https://github.com/dorssel/usbipd-win/releases/download/v3.2.0/usbipd-win_3.2.0.msi
+
+### Admin CMD
+
+`bcdedit /set testsigning on`
+`reboot`
+
+### Install USBip
+
+https://github.com/vadimgrn/usbip-win2/releases/download/v.0.9.5.6/USBip-0.9.5.6-Release.exe
+(Full Install)
+
+
 ## Windows USBIP-D Server
 
 https://github.com/dorssel/usbipd-win
